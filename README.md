@@ -1,53 +1,24 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+แนวทางการทำงาน ESP32_ESP-IDF_HelloWorld-cook-book
 
-# Hello World Example
+ระบุตัวอย่างที่ใช้ ว่าเอามาจากตัวอย่างไหน
 
-Starts a FreeRTOS task to print "Hello World".
+เลือก new project แล้วตั้งชื่อโปรเจค ที่เก็บโฟลเดอร์ และเลือก port
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+<img width="1470" alt="ภาพถ่ายหน้าจอ 2567-11-10 เวลา 15 29 18" src="https://github.com/user-attachments/assets/e190fe56-652e-4201-a7e4-3a5e4df328ef">
 
-## How to use example
+เลือกโปรเจค HelloWorld แล้วกด create project
 
-Follow detailed instructions provided specifically for this example.
+<img width="1470" alt="ภาพถ่ายหน้าจอ 2567-11-10 เวลา 16 49 39" src="https://github.com/user-attachments/assets/39ab3cd5-f6a3-4b56-b179-e2550ae9725e">
 
-Select the instructions depending on Espressif chip installed on your development board:
+ทำการแก้ไขโค้ดใน hello_world_main.c
+ส่วนนี้เพื่อให้แสดงคำที่จะแสดง
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+<img width="1470" alt="ภาพถ่ายหน้าจอ 2567-11-10 เวลา 16 50 41" src="https://github.com/user-attachments/assets/01a08587-4dbf-4247-a6c3-fee8f3950351">
 
+ส่วนนี้เพื่อจับเวลา loop เราตั้งไว้ 5 วินาที 5 ถ้าครบ 5 วินาที จะ restart คำใหม่อีกรอบ
 
-## Example folder contents
+<img width="534" alt="ภาพถ่ายหน้าจอ 2567-11-10 เวลา 16 51 37" src="https://github.com/user-attachments/assets/ff8dd49f-b0d0-4cc6-a8d4-d7791e83bd6d">
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+ผลลัพธ์
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
-
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
-
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-## Technical support and feedback
-
-Please use the following feedback channels:
-
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
-
-We will get back to you as soon as possible.
+<img width="1470" alt="ภาพถ่ายหน้าจอ 2567-11-10 เวลา 16 52 51" src="https://github.com/user-attachments/assets/d6eb5fbd-40af-43e6-a26d-bc61001bd290">
